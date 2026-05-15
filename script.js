@@ -21,18 +21,18 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
-  // Navbar logo scroll logic
-  const navLogo = document.getElementById('nav-logo');
+  // Navbar scroll logic
+  const navbar = document.getElementById('navbar');
   const heroLogo = document.getElementById('hero-logo');
   
-  if (navLogo && heroLogo) {
+  if (navbar && heroLogo) {
     const heroObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         // If the large hero logo is not intersecting (has been scrolled past)
         if (!entry.isIntersecting) {
-          navLogo.classList.add('visible');
+          navbar.classList.add('visible');
         } else {
-          navLogo.classList.remove('visible');
+          navbar.classList.remove('visible');
         }
       });
     }, { 

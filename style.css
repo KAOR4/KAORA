@@ -128,7 +128,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 6%;
+  padding: 1rem 6%;
   position: fixed;
   top: 0;
   left: 0;
@@ -137,20 +137,22 @@ nav {
   background: rgba(247, 245, 240, 0.85); /* Translucent background */
   backdrop-filter: blur(15px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-}
-
-#nav-logo {
-  font-size: 2.5rem;
-  letter-spacing: 1px;
-  text-decoration: none;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
 }
 
-#nav-logo.visible {
+nav.visible {
   opacity: 1;
   visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-logo-img {
+  max-width: 160px;
+  height: auto;
+  display: block;
 }
 
 .nav-links {
